@@ -65,7 +65,11 @@ function App() {
   ];
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#f2f2f2",
+      }}
+    >
       <NavBar />
       <Hero />
       <div className="container">

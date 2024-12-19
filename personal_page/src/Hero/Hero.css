@@ -1,0 +1,115 @@
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+    url("../assets/edusity/hero.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 0; /* Start with no width */
+  animation: typing 4s steps(40) infinite,
+    /* Typing animation repeats infinitely */ blink-caret 0.75s step-end
+      infinite; /* Blinking caret animation */
+  animation-delay: 0s; /* Ensure it starts immediately */
+}
+
+@keyframes typing {
+  0% {
+    width: 0; /* Start with no text */
+  }
+  50%,
+  100% {
+    width: 100%; /* Animate to full width */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Make caret disappear */
+  }
+}
+
+.hero-text h2 {
+  font-size: 50px;
+  font-weight: 500;
+  display: block; /* Ensure it starts on a new line */
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 10px auto 20px;
+  line-height: 1.4;
+  opacity: 1; /* Static, no animation applied */
+}
+
+.hero-text button {
+  background-color: #f6f1f0;
+  color: #585252;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.hero-text button:hover {
+  background-color: #ff6347; /* Change background on hover */
+  color: #fff; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+@keyframes typing {
+  to {
+    width: 100%; /* Animate to full width */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Make caret disappear */
+  }
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 850px) {
+  .hero-text h1 {
+    font-size: 40px; /* Keep h1 readable on smaller screens */
+  }
+
+  .hero-text h2 {
+    font-size: 30px; /* Reduce the size of h2 */
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-text h1 {
+    font-size: 30px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .hero-text h2 {
+    font-size: 24px; /* Further reduce the size of h2 on smaller devices */
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    margin: 15px auto 30px;
+  }
+}

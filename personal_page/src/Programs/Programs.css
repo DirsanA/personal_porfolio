@@ -1,0 +1,139 @@
+/* Programs Grid Container */
+.Programs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+  gap: 25px; /* Space between cards */
+  margin: 10px auto;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Individual Program Card */
+.Program {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative; /* For overlay positioning */
+  height: 250px; /* Default height for larger screens */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Position the overlay at the bottom */
+}
+
+/* Hover effect: Slight lift when hovered */
+.Program:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Image */
+.Program img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay at the Bottom: Initially hidden */
+.caption-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff; /* White text for contrast */
+  padding: 10px 0;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Hidden from the bottom */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+/* Show progress bar and text when card is hovered */
+.Program:hover .caption-overlay {
+  opacity: 1; /* Make the overlay visible */
+  transform: translateY(0); /* Move overlay up from the bottom */
+}
+
+.caption-overlay p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+  width: 80%; /* Centered progress bar */
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  height: 8px;
+  border-radius: 5px;
+  margin: 10px auto; /* Center it horizontally */
+  overflow: hidden;
+  position: relative; /* To position the progress text within it */
+  transform: translateY(
+    30px
+  ); /* Initially, set a slight gap below the overlay */
+  transition: transform 0.3s ease; /* Smooth animation for vertical movement */
+}
+
+/* Progress Fill (Starts at 0% width) */
+.progress {
+  height: 100%;
+  width: 0%; /* Initially 0% width */
+  background-color: #4caf50; /* Green progress color */
+  transition: width 1s ease-in-out; /* Slow down the width change */
+}
+
+/* Hover effect for the progress bar: Move up when hovering */
+.Program:hover .progress-bar {
+  transform: translateY(-10px); /* Move the progress bar up */
+}
+
+/* Progress Fill (Starts at 0% width) */
+.progress {
+  height: 100%;
+  width: 0%; /* Initially 0% width */
+  background-color: #4caf50; /* Green progress color */
+  transition: width 0.5s ease-in-out; /* Animate width change */
+}
+
+/* Progress Percentage */
+.progress-text {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .Programs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .Programs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .Programs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Increased height for smaller screens */
+  .Program {
+    height: 350px; /* Increased height on mobile */
+  }
+
+  .caption-overlay p {
+    font-size: 14px; /* Slightly smaller font on mobile */
+  }
+}
+
+/* Hover effect for the progress bar: Move up when hovering */
+.Program:hover .progress-bar {
+  transform: translateY(-10px); /* Move the progress bar up */
+}

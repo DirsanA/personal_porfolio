@@ -1,0 +1,36 @@
+.title {
+  text-align: center;
+  margin: 70px 0 30px;
+}
+
+.sub-title {
+  font-size: 15px;
+  color: #212ea0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title h2 {
+  position: relative;
+  font-size: 32px;
+  color: rgb(14, 12, 12);
+  margin-top: 5px;
+  text-transform: none;
+  display: inline-block;
+}
+
+.title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adjust to position underline */
+  left: 0;
+  width: 0%; /* Initially hidden */
+  height: 4px;
+  background-color: rgb(230, 171, 171); /* Underline color */
+  transition: width 1s ease-in-out; /* Smooth animation */
+  text-underline-offset: 15px;
+}
+
+.title.animate h2::after {
+  width: 100%; /* Animate to full width */
+}

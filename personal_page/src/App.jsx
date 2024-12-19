@@ -3,7 +3,6 @@ import NavBar from "./NavBar/NavBar";
 import Programs from "./Programs/Programs";
 import Title from "./Title/Title";
 import About from "./About/About";
-import Campus from "./Campus/Campus";
 import Testimonals from "./Testimonals/Testimonals";
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
@@ -75,9 +74,7 @@ function App() {
         <Title title="Skills" />
         {/* Pass the languages data here */}
         <Programs languages={languages} />
-        <Title title="Campus Photos" />
-        <Campus />
-        <Title title="What Students Say" />
+        <Title title="Projects" />
         <Testimonals />
         <Title subTitle="Contact Us" title="Get in touch" />
         <Contact />

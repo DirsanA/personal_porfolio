@@ -69,8 +69,6 @@
 }
 
 .hero-text button:hover {
-  background-color: #ff6347; /* Change background on hover */
-  color: #fff; /* Change text color on hover */
   transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 

@@ -37,24 +37,34 @@ const Contact = () => {
         <h3>
           Send Message <img src={msgIcon} alt="" />
         </h3>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          dicta eos commodi consequatur voluptatem id ad velit, illum odio
-          doloribus? Assumenda tempora quia veritatis esse dolores tempore
-          impedit beatae hic.
+          Looking to bring your digital ideas to life? Whether it's creating a
+          stunning website, developing a cutting-edge app, or producing
+          high-quality video content, I'm here to help! Reach out to me for
+          expert web development, app creation, and professional video editing.
+          Let’s work together to turn your vision into reality.
         </p>
+
         <ul>
           <li>
-            {" "}
-            <img src={mail}></img>dagi@gmail.com
+            <a href="mailto:dirsanantehun739@gmail.com">
+              <img src={mail} alt="Email" /> dirsanantehun739@gmail.com
+            </a>
           </li>
           <li>
-            {" "}
-            <img src={phone}></img> +251 927610843
+            <a href="tel:+251927610843">
+              <img src={phone} alt="Phone" /> +251 927610843
+            </a>
           </li>
           <li>
-            {" "}
-            <img src={location}></img>Bahirdar infront of soliyana hotel
+            <a
+              href="https://www.google.com/maps?q=Bahirdar, Ethiopia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={location} alt="Location" /> Bahirdar, Ethiopia
+            </a>
           </li>
         </ul>
       </div>

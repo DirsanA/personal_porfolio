@@ -12,6 +12,7 @@
 .about-right {
   flex-basis: 56%;
 }
+
 .aboutImg {
   width: 100%;
   border-radius: 10px;
@@ -38,6 +39,7 @@
 .about p {
   color: #676767;
   margin-bottom: 15px;
+  font-size: 18px;
 }
 /* media query */
 @media (max-width: 800px) {

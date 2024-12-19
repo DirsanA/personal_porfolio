@@ -1,14 +1,19 @@
 import "./About.css";
 import aboutImg from "../assets/edusity/about.png";
 import playIcon from "../assets/edusity/play-icon.png";
+
 const About = ({ setPlayState }) => {
   return (
     <div className="about">
       <div className="about-left">
-        <img src={aboutImg} alt="Image for about" className="aboutImg"></img>
+        <img
+          src={aboutImg}
+          alt="About Dirsan Antehun"
+          className="aboutImg"
+        ></img>
         <img
           src={playIcon}
-          alt="Image for Play Icon"
+          alt="Play Icon"
           className="playIcon"
           onClick={() => {
             setPlayState(true);
@@ -16,32 +21,33 @@ const About = ({ setPlayState }) => {
         ></img>
       </div>
       <div className="about-right">
-        <h3>About University</h3>
-        <h2>Nurturing Tomorrows Leader Today</h2>
+        <h3>About Me</h3>
+        <h2>
+          Hi, <span className="underline-animation">I'm Dirsan Antehun</span>
+        </h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-          cupiditate ipsam suscipit reiciendis ullam ad ea eius, porro quas at
-          recusandae animi sed harum obcaecati corporis quia! Quisquam, iste
-          voluptate.
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            minus molestias neque sit in voluptate facere ullam harum fugit
-            magni consequatur illo fugiat sunt molestiae, possimus veniam dolore
-            recusandae ipsam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            recusandae iste odit exercitationem laborum vero ducimus numquam
-            illo nisi molestiae nemo, quo voluptatem velit reiciendis,
-            distinctio incidunt perferendis. Adipisci, temporibus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            recusandae iste odit exercitationem laborum vero
-          </p>
+          I'm a passionate software engineer, a creative video editor, and a
+          skilled application developer with a strong drive for building digital
+          solutions. My goal is to bring your ideas to life through code,
+          design, and innovation.
+        </p>
+        <p>
+          With a solid foundation in software engineering, I specialize in
+          developing high-performance applications that are both functional and
+          user-friendly. Whether it's mobile app development, web development,
+          or creating engaging video content, I strive to deliver top-quality
+          results for every project.
+        </p>
+        <p>
+          I have experience working with various programming languages,
+          frameworks, and tools, including Java, Android, JavaScript, React, and
+          Firebase. My passion for problem-solving and my attention to detail
+          help me create seamless user experiences, and I enjoy collaborating
+          with clients to bring their visions to life.
         </p>
       </div>
     </div>
   );
 };
+
 export default About;

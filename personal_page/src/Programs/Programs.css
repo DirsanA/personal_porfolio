@@ -12,7 +12,6 @@
 .Program {
   border-radius: 10px;
   overflow: hidden;
-  background-color: #f9f9f9; /* Light background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   position: relative; /* For overlay positioning */
   height: 250px; /* Default height for larger screens */

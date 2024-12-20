@@ -20,7 +20,6 @@ import { useState } from "react";
 function App() {
   const [playState, setPlayState] = useState(false);
 
-  // List of programming languages and their progress
   const languages = [
     {
       name: "JavaScript",

@@ -1,103 +1,105 @@
-/* Testimonials container styling */
 .test {
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 0 80px;
   position: relative;
-  width: 100%; /* Ensure the container spans the full width */
 }
 
-/* Navigation Buttons */
 .next-btn,
 .back-btn {
   position: absolute;
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
-  width: 50px;
   padding: 10px;
+  width: 50px;
   background: #212ea0;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  z-index: 2; /* Bring buttons above the slider */
-}
-
-.next-btn:hover,
-.back-btn:hover {
-  transform: translateY(-50%) scale(1.1); /* Hover effect: Slight scale-up */
 }
 
 .back-btn {
+  right: auto;
   left: 0;
 }
 
-.next-btn {
-  right: 0;
-}
-
-/* Slider Container */
 .slider {
   overflow: hidden;
-  border-radius: 10px; /* Rounded corners for the slider */
-  width: 100%; /* Ensure slider takes full width */
 }
 
-/* List for slides */
 .slider ul {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
-  padding: 0; /* Remove padding */
-  list-style: none;
-  margin: 0; /* No extra margin */
+  overflow-x: hidden;
+  width: 400%;
+  transition: 0.5s;
 }
 
-/* Each Slide item (one image) */
 .slider ul li {
   list-style: none;
-  width: 100%; /* Each slide takes 100% of the container's width */
-  flex-shrink: 0; /* Prevent slides from shrinking */
-  display: block;
+  width: 100%;
+  padding: 20px;
 }
 
-/* Slide Styling */
 .slide {
-  position: relative;
-  padding: 0; /* Remove padding */
-  overflow: hidden; /* Ensure the image stays within the boundaries */
-  width: 100%; /* Ensure the image container takes full width */
+  line-height: 1.4;
+  color: #676767;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05, green, blue, alpha);
 }
 
 .slide img {
-  width: 100%; /* Make the image take full width */
-  height: 100%; /* Make the image take full height */
-  object-fit: cover; /* Ensures the image covers the slide without distortion */
-  display: block;
+  width: 100%;
+  height: 400px;
 }
 
-/* Hide text and other content */
-.slide .user-info,
-.slide p {
-  display: none; /* Hide all text */
+/* Hover effect for text area only */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  position: relative;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Media Queries for Responsiveness */
+/* Hover effect: move text up and down */
+.slide:hover .user-info {
+  transform: translateY(-10px); /* Move the text up */
+}
+
+/* Media query */
 @media (max-width: 800px) {
   .test {
     padding: 0 40px;
   }
+
   .next-btn,
   .back-btn {
+    padding: 10px;
     width: 35px;
-    padding: 5px;
+  }
+
+  .test ul li {
+    padding: 10px;
+  }
+
+  .slide {
+    padding: 10px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 400px;
   }
 }
 
-@media (max-width: 500px) {
-  .test {
-    padding: 0 20px;
+@media (max-width: 800px) {
+  .user-info {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
   }
-  .next-btn,
-  .back-btn {
-    width: 30px;
-    padding: 5px;
+  .user-info h3 {
+    font-size: 16px;
+  }
+  .slider p {
+    font-size: 14px;
   }
 }

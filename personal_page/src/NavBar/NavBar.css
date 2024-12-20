@@ -11,6 +11,42 @@ nav {
   z-index: 10;
   justify-content: space-between;
 }
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 12px 24px; /* Adjust padding for a nice shape */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Make text bold */
+  color: #fff; /* Text color */
+  text-transform: uppercase; /* Optional: Make text uppercase */
+  background: linear-gradient(
+    135deg,
+    #6e8efb,
+    #a777e3
+  ); /* Gradient background */
+  border: none; /* Remove border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Add pointer cursor */
+  outline: none; /* Remove outline on focus */
+  position: relative; /* For hover pseudo-elements */
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0 4px 15px rgba(218, 117, 180, 0.4); /* Soft glow shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
+}
+
+/* Hover Effect */
+.btn:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.6); /* Enhanced shadow */
+  background: linear-gradient(135deg, #a777e3, #6e8efb); /* Reverse gradient */
+}
+
+/* Active State (Click effect) */
+.btn:active {
+  transform: translateY(0); /* Return to original position */
+  box-shadow: 0 2px 10px rgba(110, 142, 251, 0.3); /* Soften shadow */
+}
+
 .logo {
   width: 70px;
   height: 70px;
@@ -57,7 +93,7 @@ nav ul li {
     transition: 0.5s;
     background: #212ea0;
   }
- 
+
   @media (max-width: 1000px) {
     nav ul {
       position: fixed;
@@ -71,18 +107,19 @@ nav ul li {
       background: #212ea0;
     }
 
-  nav ul li {
-    display: block;
-    margin: 25px 40px;
-  }
+    nav ul li {
+      display: block;
+      margin: 25px 40px;
+    }
 
-  .menuIcon {
-    display: block;
-    width: 30px;
-    cursor: pointer;
-  }
+    .menuIcon {
+      display: block;
+      width: 30px;
+      cursor: pointer;
+    }
 
-  .hide-mobile-menu {
-    left: -200px; /* Hide menu off-screen to the left */
+    .hide-mobile-menu {
+      left: -200px; /* Hide menu off-screen to the left */
+    }
   }
 }

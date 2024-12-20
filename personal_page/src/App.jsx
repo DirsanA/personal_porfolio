@@ -66,7 +66,8 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: "#f2f2f2",
+        background:
+          "linear-gradient(rgba(227, 224, 224, 0.7), rgba(224, 222, 241, 0.7))",
       }}
     >
       <NavBar />

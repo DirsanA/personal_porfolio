@@ -13,7 +13,7 @@ const Hero = () => {
           that combine technology and creativity to build unique and impactful
           solutions.
         </p>
-        <Link to="test" smooth={true} offset={-230} duration={500}>
+        <Link to="test" smooth={true} offset={-70} duration={500}>
           <button className="btn">
             Explore My Work <img src={darkArrow} alt="Arrow" />
           </button>

@@ -17,7 +17,7 @@ a {
   padding-right: 10%;
 }
 .btn {
-  background: #fff;
+  background: linear-gradient(135deg, #889cde, #d9cfe8);
   color: #212121;
   padding: 14px 25px;
   font-size: 16px;
@@ -33,7 +33,7 @@ a {
   margin-left: 10px;
   width: 20px;
 }
-/* Media query */
+
 @media (max-width: 1200px) {
   .container {
     padding-left: 5%;
@@ -41,5 +41,15 @@ a {
   }
   .btn {
     padding: 14px 18px;
+  }
+}
+
+@media (max-width: 840px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding: 10px 7px;
   }
 }

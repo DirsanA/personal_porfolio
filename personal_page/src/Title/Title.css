@@ -26,7 +26,7 @@
   left: 0;
   width: 0%; /* Initially hidden */
   height: 4px;
-  background-color: rgb(230, 171, 171); /* Underline color */
+  background-color: rgb(87, 60, 168); /* Underline color */
   transition: width 1s ease-in-out; /* Smooth animation */
   text-underline-offset: 15px;
 }

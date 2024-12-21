@@ -6,45 +6,80 @@ nav {
   left: 0;
   position: fixed;
   display: flex;
-  /* it is displaying the container in line that is the difference with displaying flex which is displaying container and displaying the childeren items  */
   align-items: center;
   z-index: 10;
   justify-content: space-between;
 }
+
+/* Active Link Indicator */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 5px;
+  transition: color 0.2s ease, width 0.2s ease-in-out;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #6e8efb;
+  transition: width 0.2s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a.active {
+  color: inherit; /* Retain original color */
+}
+
+nav ul li a {
+  transition: all 0.2s ease;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a:not(.active)::after {
+  width: 0;
+}
+
 /* Button Styling */
 .btn {
   display: inline-block;
-  padding: 12px 24px; /* Adjust padding for a nice shape */
-  font-size: 16px; /* Adjust font size */
-  font-weight: bold; /* Make text bold */
-  color: #fff; /* Text color */
-  text-transform: uppercase; /* Optional: Make text uppercase */
-  background: linear-gradient(
-    135deg,
-    #6e8efb,
-    #a777e3
-  ); /* Gradient background */
-  border: none; /* Remove border */
-  border-radius: 30px; /* Rounded corners */
-  cursor: pointer; /* Add pointer cursor */
-  outline: none; /* Remove outline on focus */
-  position: relative; /* For hover pseudo-elements */
-  overflow: hidden; /* Prevent content overflow */
-  box-shadow: 0 4px 15px rgba(218, 117, 180, 0.4); /* Soft glow shadow */
-  transition: all 0.3s ease-in-out; /* Smooth transition for all effects */
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(135, 87, 116, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Hover Effect */
 .btn:hover {
-  transform: translateY(-5px); /* Slight upward movement */
-  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.6); /* Enhanced shadow */
-  background: linear-gradient(135deg, #a777e3, #6e8efb); /* Reverse gradient */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.6);
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
 }
 
-/* Active State (Click effect) */
 .btn:active {
-  transform: translateY(0); /* Return to original position */
-  box-shadow: 0 2px 10px rgba(110, 142, 251, 0.3); /* Soften shadow */
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(110, 142, 251, 0.3);
 }
 
 .logo {
@@ -52,11 +87,10 @@ nav {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
-/* Hide the logo on screens smaller than 600px */
 @media (max-width: 600px) {
   .logo {
     display: none;
@@ -66,17 +100,21 @@ nav {
 .logo:hover {
   transform: rotate(10deg) scale(1.1);
 }
+
 nav ul li {
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   margin: 5px 20px;
-  list-style: none;
-  /* it is displaying the childeren in along in line  */
 }
+
 .dark-nav {
-  background: rgb(32, 9, 203);
+  background: linear-gradient(
+    rgba(173, 117, 117, 0.7),
+    rgba(127, 123, 155, 0.7)
+  );
   transition: 0.5s;
 }
+
 .menuIcon {
   display: none;
 }
@@ -86,40 +124,29 @@ nav ul li {
     position: fixed;
     bottom: 0;
     top: 0;
-    left: 0; /* Move the menu to the left */
+    left: 0;
     z-index: -1;
     width: 200px;
     padding-top: 70px;
     transition: 0.5s;
-    background: #212ea0;
+    background: linear-gradient(
+      rgba(173, 117, 117, 0.7),
+      rgba(127, 123, 155, 0.7)
+    );
   }
 
-  @media (max-width: 1000px) {
-    nav ul {
-      position: fixed;
-      bottom: 0;
-      top: 0;
-      left: 0; /* Move the menu to the left */
-      z-index: -1;
-      width: 200px;
-      padding-top: 70px;
-      transition: 0.5s;
-      background: #212ea0;
-    }
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+  }
 
-    nav ul li {
-      display: block;
-      margin: 25px 40px;
-    }
+  .menuIcon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
 
-    .menuIcon {
-      display: block;
-      width: 30px;
-      cursor: pointer;
-    }
-
-    .hide-mobile-menu {
-      left: -200px; /* Hide menu off-screen to the left */
-    }
+  .hide-mobile-menu {
+    left: -200px;
   }
 }
